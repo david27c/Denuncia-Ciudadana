@@ -13,6 +13,18 @@
         android:theme="@style/Theme.DenunciaCiudadana"
         tools:targetApi="31">
         <activity
+            android:name=".activity_profile_settings"
+            android:exported="false" />
+        <activity
+            android:name=".activity_report_detail"
+            android:exported="false" />
+        <activity
+            android:name=".activity_home"
+            android:exported="false" />
+        <activity
+            android:name=".activity_login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

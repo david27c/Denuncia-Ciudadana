@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Título del reporte -->
+    <TextView
+        android:id="@+id/report_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Título del Reporte"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Descripción completa del reporte -->
+    <TextView
+        android:id="@+id/report_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descripción del reporte."
+        android:layout_below="@id/report_title"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp" />
+
+    <!-- Ubicación del reporte -->
+    <TextView
+        android:id="@+id/report_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ubicación"
+        android:layout_below="@id/report_description"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp" />
+
+    <!-- Fecha del reporte -->
+    <TextView
+        android:id="@+id/report_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:layout_below="@id/report_location"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp" />
+
+    <!-- Estado del reporte -->
+    <TextView
+        android:id="@+id/report_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado"
+        android:layout_below="@id/report_date"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp" />
+</RelativeLayout>
