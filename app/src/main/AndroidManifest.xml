@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tuempresa.denunciaciudadana">
+
+    <!-- Permisos (si usas Firebase y acceso a internet) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -12,27 +17,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DenunciaCiudadana"
         tools:targetApi="31">
-        <activity
-            android:name=".activity_profile_settings"
-            android:exported="false" />
-        <activity
-            android:name=".activity_report_detail"
-            android:exported="false" />
-        <activity
-            android:name=".activity_home"
-            android:exported="false" />
-        <activity
-            android:name=".activity_login"
-            android:exported="false" />
+
+        <!-- Pantalla principal -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Otras pantallas -->
+        <activity android:name=".activity_login" android:exported="false" />
+        <activity android:name=".activity_home" android:exported="false" />
+        <activity android:name=".activity_report_detail" android:exported="false" />
+        <activity android:name=".activity_profile_settings" android:exported="false" />
+        <activity android:name=".Report" android:exported="false" />
+        <activity android:name=".activity_create_account" android:exported="false" />
+        <activity android:name=".activity_about_app" android:exported="false" />
+        <activity android:name=".activity_manage_employees" android:exported="false" />
+        <activity android:name=".activity_branch_status" android:exported="false" />
+        <activity android:name=".activity_taxes_billing" android:exported="false" />
+
     </application>
 
 </manifest>

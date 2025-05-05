@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Denuncia Ciudadana</string>
+    <string name="nombre">Nombre</string>
+    <string name="nombre_completo">Nombre completo</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="imagen_de_perfil">Imagen de perfil</string>
+    <string name="mostrar_nombre">Mostrar nombre</string>
+    <string name="titulo_del_reporte">Título del reporte</string>
+    <string name="fecha">Fecha</string>
+    <string name="crear_cuenta">Crear Cuenta</string>
 </resources>
