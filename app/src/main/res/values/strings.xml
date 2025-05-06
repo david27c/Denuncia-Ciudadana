@@ -9,4 +9,7 @@
     <string name="titulo_del_reporte">Título del reporte</string>
     <string name="fecha">Fecha</string>
     <string name="crear_cuenta">Crear Cuenta</string>
+    <string name="descripci_n_del_reporte">Descripción del reporte.</string>
+    <string name="ubicaci_n">Ubicación</string>
+    <string name="estado">Estado</string>
 </resources>

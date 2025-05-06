@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ProfileSettingsActivity extends AppCompatActivity {
 
     private EditText nameEditText, emailEditText;
-    private ImageView profileImageView;
     private Button saveButton;
     private CheckBox showNameCheckBox, showProfilePicCheckBox, showEmailCheckBox;
 
@@ -23,7 +22,7 @@ public class ProfileSettingsActivity extends AppCompatActivity {
         // Vinculación de elementos
         nameEditText = findViewById(R.id.name_edit_text);
         emailEditText = findViewById(R.id.email_edit_text);
-        profileImageView = findViewById(R.id.profile_image_view);
+        ImageView profileImageView = findViewById(R.id.profile_image_view);
         saveButton = findViewById(R.id.save_button);
         showNameCheckBox = findViewById(R.id.show_name_checkbox);
         showProfilePicCheckBox = findViewById(R.id.show_profile_pic_checkbox);

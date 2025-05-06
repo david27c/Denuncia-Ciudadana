@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<<xmlns:tools="http://schemas.android.com/tools" /><?xml version="1.0" encoding="utf-8"?>
 <<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.tuempresa.denunciaciudadana">
+    package="com.example.denunciaciudadana"
+tools:ignore="ExtraText">>
 
     <!-- Permisos (si usas Firebase y acceso a internet) -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -39,7 +40,9 @@
         <activity android:name=".activity_manage_employees" android:exported="false" />
         <activity android:name=".activity_branch_status" android:exported="false" />
         <activity android:name=".activity_taxes_billing" android:exported="false" />
+        <activity android:name=".ChatActivity" android:exported="false" />
+
 
     </application>
 
-</manifest>
+</manifest>>
