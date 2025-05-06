@@ -40,6 +40,10 @@
         <activity android:name=".activity_branch_status" android:exported="false" />
         <activity android:name=".activity_taxes_billing" android:exported="false" />
         <activity android:name=".ChatActivity" android:exported="false" />
+        <activity android:name=".ChatDetailActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".SettingsActivity" android:exported="false" />
+        <activity android:name=".NotificationsActivity" android:exported="false" />
 
     </application>
 
