@@ -2,23 +2,65 @@ package com.example.denunciaciudadana;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+
+        // Cargar el fragmento de inicio por defecto
+        loadFragment(new HomeFragment());
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            Fragment fragment = null;
+
+            switch (item.getItemId()) {
+                case R.id.nav_home:
+                    fragment = new HomeFragment();
+                    break;
+                case R.id.nav_reportar:
+                    fragment = new ReportarFragment();
+                    break;
+                case R.id.nav_chat:
+                    fragment = new ChatFragment();
+                    break;
+                case R.id.nav_mis_reportes:
+                    fragment = new MisReportesFragment();
+                    break;
+                case R.id.nav_perfil:
+                    fragment = new PerfilFragment();
+                    break;
+                case R.id.nav_configuracion:
+                    fragment = new ConfiguracionFragment();
+                    break;
+                case R.id.nav_notificaciones:
+                    fragment = new NotificacionesFragment();
+                    break;
+            }
+
+            if (fragment != null) {
+                loadFragment(fragment);
+                return true;
+            }
+
+            return false;
         });
+    }
+
+    private void loadFragment(Fragment fragment) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .commit();
     }
 }

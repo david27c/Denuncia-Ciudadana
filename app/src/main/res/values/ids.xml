@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ubicacion" type="id" />
+    <item name="ubicacion" type="id" />
+    <item name="bottom_navigation" type="id" />
+    <item name="nav_configuracion" type="id" />
+    <item name="nav_notificaciones" type="id" />
+    <item name="bottom_navigation" type="id" />
+    <item name="chatMessagesList" type="id" />
+</resources>

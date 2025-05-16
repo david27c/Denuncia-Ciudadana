@@ -29,16 +29,16 @@
         </activity>
 
         <!-- Otras pantallas -->
-        <activity android:name=".activity_login" android:exported="false" />
-        <activity android:name=".activity_home" android:exported="false" />
-        <activity android:name=".activity_report_detail" android:exported="false" />
-        <activity android:name=".activity_profile_settings" android:exported="false" />
+        <activity android:name=".ActivityLogin" android:exported="false" />
+        <activity android:name=".ActivityHome" android:exported="false" />
+        <activity android:name=".ActivityReportDetail" android:exported="false" />
+        <activity android:name=".ActivityProfileSettings" android:exported="false" />
         <activity android:name=".Report" android:exported="false" />
-        <activity android:name=".activity_create_account" android:exported="false" />
-        <activity android:name=".activity_about_app" android:exported="false" />
-        <activity android:name=".activity_manage_employees" android:exported="false" />
-        <activity android:name=".activity_branch_status" android:exported="false" />
-        <activity android:name=".activity_taxes_billing" android:exported="false" />
+        <activity android:name=".ActivityCreateAccount" android:exported="false" />
+        <activity android:name=".ActivityAboutApp" android:exported="false" />
+        <activity android:name=".ActivityManageEmployees" android:exported="false" />
+        <activity android:name=".ActivityBranchStatus" android:exported="false" />
+        <activity android:name=".ActivityTaxesBilling" android:exported="false" />
         <activity android:name=".ChatActivity" android:exported="false" />
         <activity android:name=".ChatDetailActivity" android:exported="false" />
         <activity android:name=".ProfileActivity" android:exported="false" />

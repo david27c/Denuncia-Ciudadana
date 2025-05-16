@@ -5,53 +5,48 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Título del reporte -->
     <TextView
         android:id="@+id/report_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/titulo_del_reporte"
+        android:text="@string/t_tulo_del_reporte"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_marginTop="20dp" />
 
-    <!-- Descripción completa del reporte -->
     <TextView
         android:id="@+id/report_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/descripci_n_del_reporte"
+        android:text="@string/descripci_n_del_report"
         android:layout_below="@id/report_title"
         android:layout_marginTop="20dp"
         android:textSize="16sp" />
 
-    <!-- Ubicación del reporte -->
     <TextView
         android:id="@+id/report_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ubicaci_n"
+        android:text="@string/ubicaci"
         android:layout_below="@id/report_description"
         android:layout_marginTop="10dp"
         android:textSize="14sp" />
 
-    <!-- Fecha del reporte -->
     <TextView
         android:id="@+id/report_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fecha"
+        android:text="@string/fech"
         android:layout_below="@id/report_location"
         android:layout_marginTop="10dp"
         android:textSize="14sp" />
 
-    <!-- Estado del reporte -->
     <TextView
         android:id="@+id/report_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/estado"
+        android:text="@string/estad"
         android:layout_below="@id/report_date"
         android:layout_marginTop="10dp"
         android:textSize="14sp" />

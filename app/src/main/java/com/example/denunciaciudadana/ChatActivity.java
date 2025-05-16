@@ -1,58 +1,51 @@
 package com.example.denunciaciudadana;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.*;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.*;
-
-import java.util.ArrayList;
 
 public class ChatActivity extends AppCompatActivity {
 
-    private EditText messageEditText;
-    private Button sendButton;
-    private ListView chatListView;
-    private ArrayAdapter<String> adapter;
-    private ArrayList<String> messagesList;
-
-    private DatabaseReference chatRef;
+    private LinearLayout chatListLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        messageEditText = findViewById(R.id.messageEditText);
-        sendButton = findViewById(R.id.sendButton);
-        chatListView = findViewById(R.id.chatListView);
+        chatListLayout = findViewById(R.id.chatListLayout);
 
-        messagesList = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, messagesList);
-        chatListView.setAdapter(adapter);
+        // Aquí agregaríamos los chats de manera manual
+        addChat("Chat 1", "Último mensaje del chat 1");
+        addChat("Chat 2", "Último mensaje del chat 2");
+        addChat("Chat 3", "Último mensaje del chat 3");
+    }
 
-        chatRef = FirebaseDatabase.getInstance().getReference("chat");
+    // Método para agregar chats al LinearLayout
+    private void addChat(final String chatName, String lastMessage) {
+        TextView chatView = new TextView(this);
+        chatView.setText(chatName + "\n" + lastMessage);
+        chatView.setPadding(16, 16, 16, 16);
+        chatView.setTextSize(18);
+        chatView.setBackgroundResource(android.R.color.darker_gray);
+        chatView.setClickable(true);
+        chatView.setFocusable(true);
 
-        sendButton.setOnClickListener(v -> {
-            String message = messageEditText.getText().toString();
-            if (!message.isEmpty()) {
-                String user = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-                chatRef.push().setValue(user + ": " + message);
-                messageEditText.setText("");
-            }
-        });
-
-        chatRef.addChildEventListener(new ChildEventListener() {
+        // Establecemos un OnClickListener para abrir la actividad de detalles del chat
+        chatView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChildAdded(DataSnapshot snapshot, String previousChildName) {
-                messagesList.add(snapshot.getValue(String.class));
-                adapter.notifyDataSetChanged();
+            public void onClick(View v) {
+                // Abrir ChatDetalleActivity con el nombre del chat
+                Intent intent = new Intent(ChatActivity.this, ChatDetalleActivity.class);
+                intent.putExtra("chatName", chatName);  // Enviar el nombre del chat
+                startActivity(intent);
             }
-            @Override public void onChildChanged(DataSnapshot s, String p) {}
-            @Override public void onChildRemoved(DataSnapshot s) {}
-            @Override public void onChildMoved(DataSnapshot s, String p) {}
-            @Override public void onCancelled(DatabaseError error) {}
         });
+
+        // Agregar el TextView al LinearLayout
+        chatListLayout.addView(chatView);
     }
 }

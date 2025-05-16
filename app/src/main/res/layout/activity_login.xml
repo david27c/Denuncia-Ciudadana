@@ -7,11 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:orientation="vertical"
         android:padding="24dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
 
         <TextView
             android:text="Denuncia Ciudadana"
@@ -24,14 +25,14 @@
 
         <EditText
             android:id="@+id/etEmail"
-            android:hint="Correo electrónico"
+            android:hint="@string/correo_electr_nico_o_usuario"
             android:inputType="textEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <EditText
             android:id="@+id/etPassword"
-            android:hint="Contraseña"
+            android:hint="@string/contrasena"
             android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,10 +40,26 @@
 
         <Button
             android:id="@+id/btnLogin"
-            android:text="Iniciar Sesión"
+            android:text="@string/iniciar_sesi_n"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:text="@string/olvidaste_tu_contrase_a"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:text="@string/no_tienes_cuenta_crear_cuenta"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
