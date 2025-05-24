@@ -9,30 +9,16 @@
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reportes públicos"
+        android:text="Mis Reportes"
         android:textSize="22sp"
         android:textColor="#333333"
         android:layout_margin="16dp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/reportesRecyclerView"
+        android:id="@+id/misReportesRecyclerView"
         android:layout_below="@id/titleText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
-        android:layout_marginBottom="80dp" />
-
-    <Button
-        android:id="@+id/fabReportar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        android:textSize="24sp"
-        android:backgroundTint="#7CA4D4"
-        android:textColor="#fff"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
-        android:layout_gravity="bottom|end" />
+        android:padding="8dp" />
 
 </RelativeLayout>

@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Denuncia Ciudadana"
 include(":app")
- 

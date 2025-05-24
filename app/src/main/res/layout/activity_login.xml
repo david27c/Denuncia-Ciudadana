@@ -1,65 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#A8E6CF">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:padding="24dp"
+    <TextView
+        android:id="@+id/titleApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Denuncia Ciudadana"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:layout_gravity="center"
+        android:paddingBottom="32dp" />
+
+    <EditText
+        android:id="@+id/emailEditText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:textColor="#333333"
+        android:textColorHint="#777777" />
 
-        <TextView
-            android:text="Denuncia Ciudadana"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_marginBottom="32dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColor="#333333"
+        android:textColorHint="#777777"
+        android:layout_marginTop="16dp" />
 
-        <EditText
-            android:id="@+id/etEmail"
-            android:hint="@string/correo_electr_nico_o_usuario"
-            android:inputType="textEmailAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Sesión"
+        android:background="#7CA4D4"
+        android:textColor="#ffffff"
+        android:layout_marginTop="24dp" />
 
-        <EditText
-            android:id="@+id/etPassword"
-            android:hint="@string/contrasena"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"/>
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:text="@string/iniciar_sesi_n"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"/>
-
-        <TextView
-            android:id="@+id/tvForgotPassword"
-            android:text="@string/olvidaste_tu_contrase_a"
-            android:textColor="@android:color/holo_blue_dark"
-            android:layout_marginTop="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/tvCreateAccount"
-            android:text="@string/no_tienes_cuenta_crear_cuenta"
-            android:textColor="@android:color/holo_blue_dark"
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿No tienes cuenta? Crear cuenta"
+        android:textColor="#333333"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center" />
+</LinearLayout>

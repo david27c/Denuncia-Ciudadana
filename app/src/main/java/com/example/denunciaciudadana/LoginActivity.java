@@ -1,50 +1,67 @@
 package com.example.denunciaciudadana;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LoginActivity extends AppCompatActivity {
-    EditText etEmail, etPassword;
-    Button btnLogin;
-    TextView tvForgotPassword, tvCreateAccount;
+import com.google.firebase.auth.FirebaseAuth;
 
-    @SuppressLint("MissingInflatedId")
+public class LoginActivity extends AppCompatActivity {
+
+    private EditText emailEditText, passwordEditText;
+    private Button loginButton;
+    private TextView registerTextView;
+
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        etEmail = findViewById(R.id.etEmail);
-        etPassword = findViewById(R.id.etPassword);
-        btnLogin = findViewById(R.id.btnLogin);
-        tvForgotPassword = findViewById(R.id.tvForgotPassword);
-        tvCreateAccount = findViewById(R.id.tvCreateAccount);
+        emailEditText = findViewById(R.id.emailEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        loginButton = findViewById(R.id.loginButton);
+        registerTextView = findViewById(R.id.registerTextView);
 
-        btnLogin.setOnClickListener(v -> {
-            String emailOrUser = etEmail.getText().toString();
-            String password = etPassword.getText().toString();
+        mAuth = FirebaseAuth.getInstance();
 
-            if ((emailOrUser.equals("admin@correo.com") || emailOrUser.equals("admin")) && password.equals("123456")) {
+        loginButton.setOnClickListener(view -> loginUser());
+
+        registerTextView.setOnClickListener(view -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void loginUser() {
+        String email = emailEditText.getText().toString().trim();
+        String pass = passwordEditText.getText().toString().trim();
+
+        if (TextUtils.isEmpty(email)) {
+            emailEditText.setError("Ingresa tu correo");
+            return;
+        }
+
+        if (TextUtils.isEmpty(pass)) {
+            passwordEditText.setError("Ingresa tu contraseña");
+            return;
+        }
+
+        mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                Toast.makeText(LoginActivity.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
+                // Redirige al activity principal (Inicio)
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 finish();
             } else {
-                Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Error: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
             }
-        });
-
-        tvForgotPassword.setOnClickListener(v -> {
-            Toast.makeText(this, "Funcionalidad no implementada", Toast.LENGTH_SHORT).show();
-        });
-
-        tvCreateAccount.setOnClickListener(v -> {
-            startActivity(new Intent(LoginActivity.this, CreateAccountActivity.class));
         });
     }
 }
