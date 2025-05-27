@@ -28,22 +28,11 @@
             </intent-filter>
         </activity>
 
-        <!-- Otras pantallas -->
-        <activity android:name=".activity_login" android:exported="false" />
-        <activity android:name=".activity_home" android:exported="false" />
-        <activity android:name=".activity_report_detail" android:exported="false" />
-        <activity android:name=".activity_profile_settings" android:exported="false" />
-        <activity android:name=".Report" android:exported="false" />
-        <activity android:name=".activity_create_account" android:exported="false" />
-        <activity android:name=".activity_about_app" android:exported="false" />
-        <activity android:name=".activity_manage_employees" android:exported="false" />
-        <activity android:name=".activity_branch_status" android:exported="false" />
-        <activity android:name=".activity_taxes_billing" android:exported="false" />
-        <activity android:name=".ChatActivity" android:exported="false" />
-        <activity android:name=".ChatDetailActivity" android:exported="false" />
-        <activity android:name=".ProfileActivity" android:exported="false" />
-        <activity android:name=".SettingsActivity" android:exported="false" />
-        <activity android:name=".NotificationsActivity" android:exported="false" />
+        <!-- Pantallas secundarias -->
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".MenuPrincipalActivity" android:exported="false" />
+        <activity android:name=".DenunciarActivity" android:exported="false" />
+        <activity android:name=".VerDenunciasActivity" android:exported="false" />
 
     </application>
 

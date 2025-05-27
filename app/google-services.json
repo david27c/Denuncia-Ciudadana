@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "201570030812",
-    "firebase_url": "https://practica-ugb-a1-2025-82d2d-default-rtdb.firebaseio.com",
-    "project_id": "practica-ugb-a1-2025-82d2d",
-    "storage_bucket": "practica-ugb-a1-2025-82d2d.firebasestorage.app"
+    "project_number": "66743518011",
+    "project_id": "denuncia-ciudadana-77efb",
+    "storage_bucket": "denuncia-ciudadana-77efb.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:201570030812:android:ff6d62dd69c0ebdc149019",
+        "mobilesdk_app_id": "1:66743518011:android:c2b714e7445f0d8cbced1e",
         "android_client_info": {
           "package_name": "com.example.denunciaciudadana"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCuq9cKUizA3MT4r0uEjex-Ag4n16c2hxk"
+          "current_key": "AIzaSyDJolFNr1WHg1IdTyLWN3nr9s7ssrBoSV0"
         }
       ],
       "services": {

@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.denunciaciudadana" />
-                  <option name="mobileSdkAppId" value="1:201570030812:android:ff6d62dd69c0ebdc149019" />
-                  <option name="projectId" value="practica-ugb-a1-2025-82d2d" />
-                  <option name="projectNumber" value="201570030812" />
+                  <option name="mobileSdkAppId" value="1:66743518011:android:c2b714e7445f0d8cbced1e" />
+                  <option name="projectId" value="denuncia-ciudadana-77efb" />
+                  <option name="projectNumber" value="66743518011" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
