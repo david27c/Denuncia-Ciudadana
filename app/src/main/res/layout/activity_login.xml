@@ -20,29 +20,33 @@
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         android:textColor="#333333"
-        android:textColorHint="#777777" />
+        android:textColorHint="#555555"
+        android:importantForAutofill="yes"
+        android:autofillHints="emailAddress" />
 
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textColor="#333333"
-        android:textColorHint="#777777"
-        android:layout_marginTop="16dp" />
+        android:textColorHint="#555555"
+        android:layout_marginTop="16dp"
+        android:importantForAutofill="yes"
+        android:autofillHints="password" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Iniciar Sesión"
+        android:layout_height="56dp"
+        android:text="Iniciar sesión"
         android:background="#7CA4D4"
-        android:textColor="#ffffff"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="24dp" />
 
     <TextView

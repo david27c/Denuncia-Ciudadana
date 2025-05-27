@@ -1,50 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_margin="8dp"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:elevation="4dp"
-    android:background="#ffffff">
+    android:layout_marginBottom="16dp"
+    android:elevation="8dp"
+    android:radius="20dp"
+    android:layout_margin="8dp">
 
     <LinearLayout
         android:orientation="vertical"
-        android:padding="12dp"
+        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!-- Imagen del reporte -->
         <ImageView
-            android:id="@+id/imagenReporte"
+            android:id="@+id/imgReporte"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop" />
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:background="#DADADA" />
 
+        <!-- Descripción -->
         <TextView
-            android:id="@+id/descripcionText"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtDescripcion"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Descripción"
+            android:text="Descripción del reporte"
             android:textColor="#333333"
             android:textSize="16sp"
+            android:textStyle="bold"
             android:layout_marginTop="8dp" />
 
+        <!-- Ubicación y Fecha -->
         <TextView
-            android:id="@+id/tipoText"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtUbicacion"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#333333" />
+            android:text="Ubicación: San José, CR"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/estadoText"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtFecha"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#333333" />
+            android:text="Fecha: 26/05/2025"
+            android:textColor="#888888"
+            android:layout_marginTop="2dp" />
 
-        <TextView
-            android:id="@+id/fechaText"
-            android:layout_width="wrap_content"
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#333333" />
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="10dp">
 
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Editar"
+                android:backgroundTint="#7CA4D4"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eliminar"
+                android:backgroundTint="#D46F7C"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
